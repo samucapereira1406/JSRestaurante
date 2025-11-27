@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painel do Garçom - ReservaOnline</title>
+  <link rel="stylesheet" href="../restaurante/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Painel do Garçom</h1>
+  </header>
+
+  <section style="max-width: 400px; margin: 0 auto;">
+  <label for="mesas">Selecione uma mesa para gerenciar os pedidos:</label>
+  <select id="mesas">
+    <option disabled selected>Escolha uma mesa</option>
+  </select>
+
+  <button onclick="acessarMesa()">Acessar</button>
+  <button onclick="logout()">Sair</button>
+</section>
+
+<script src="painel.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+# Sistema de Restaurante - Backend
+
+Este projeto implementa um sistema completo de restaurante com funcionalidades como cadastro de clientes, reservas, pedidos, gerenciamento de garçons, mesas e cardápio. O backend foi construído com Node.js e banco de dados MySQL, seguindo a arquitetura DAO–Service–Controller.
+
+---
+
+## ✨ Tecnologias Utilizadas
+
+* **Node.js**
+* **Express**
+* **MySQL**
+* **mysql2/promise**
+* **Thunder Client (para testes)**
+
+---
+
+## 📂 Estrutura de Pastas
+
+```
+backend/
+├── config/
+├── controller/
+├── dao/
+├── model/
+├── routes/
+├── service/
+└── server.js
+```
+
+---
+
+## 📃 Entidades e Funcionalidades
+
+### Cliente
+
+* Cadastro, listagem, edição, remoção
+* Campos: nome, telefone, email, senha
+
+### Restaurante
+
+* Cadastro, gerenciamento de mesas, cardápio e garçons
+
+### Mesa
+
+* Vinculada a um restaurante
+* Campos: número, capacidade, status (ocupada/disponível)
+
+### Garçom
+
+* Vinculado a um restaurante
+* Pode ser vinculado a mesas
+
+### Reserva
+
+* Cliente escolhe restaurante e faz reserva de uma mesa para um horário
+
+### Pedido
+
+* Criado pelo garçom para uma mesa
+* Possui status (aberto/finalizado) e data
+* Ao ser finalizado, libera a mesa automaticamente
+
+### Cardápio
+
+* Gerenciado pelo restaurante
+* Campos: nome, preço, id\_restaurante
+
+### Item do Pedido
+
+* Tabela intermediária entre pedido e cardápio
+* Campos: id\_pedido, id\_item, quantidade
+
+### Associação Garçom-Mesa
+
+* Permite definir quais mesas cada garçom atende
+
+---
+
+## 🚩 Rotas Principais
+
+### Clientes
+
+* `POST /api/clientes`
+* `GET /api/clientes`
+* `PUT /api/clientes/:id`
+* `DELETE /api/clientes/:id`
+
+### Restaurantes
+
+* `POST /api/restaurantes`
+* `GET /api/restaurantes`
+
+### Mesas
+
+* `POST /api/mesas`
+* `GET /api/mesas`
+
+### Garçons
+
+* `POST /api/garcons`
+* `GET /api/garcons`
+
+### Reservas
+
+* `POST /api/reservas`
+* `GET /api/reservas`
+
+### Pedidos
+
+* `POST /api/pedidos`
+* `PATCH /api/pedidos/:id/finalizar`
+
+### Cardápio
+
+* `POST /api/cardapio`
+* `GET /api/cardapio`
+
+### Itens do Pedido
+
+* `POST /api/pedidos/:idPedido/itens`
+* `GET /api/pedidos/:idPedido/itens`
+* `DELETE /api/pedidos/item/:idItemPedido`
+
+### Garçom-Mesa
+
+* `POST /api/garcons/:idGarcom/mesas/:idMesa`
+* `GET /api/garcons/:idGarcom/mesas`
+* `DELETE /api/garcons/:idGarcom/mesas/:idMesa`
+
+---
+
+## 💼 Como Rodar o Projeto
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+2. Configure seu banco MySQL com o nome `RESTAURANTE`.
+
+3. Crie as tabelas usando os scripts SQL fornecidos nos arquivos `.sql` ou na pasta `database/`.
+
+4. Inicie o servidor:
+
+```bash
+node backend/server.js
+```
+cors
+5. Teste as rotas com Thunder Client ou Postman.
+
+---
+
+## 📄 Documentação Complementar
+
+* Todos os módulos seguem padrão **DAO-Service-Controller**.
+* O projeto garante **integridade referencial** entre as tabelas.
+* Toda interação com o banco utiliza **prepared statements com mysql2/promise**.
+* Os dados foram testados com Thunder Client e estão prontos para integração com o frontend em HTML/JavaScript puro.
+
+---
+
+Sistema 100% funcional. Pronto para apresentação e expansão com frontend ou integração real.

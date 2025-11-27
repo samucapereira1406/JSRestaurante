@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Primeira Mesa - ReservaOnline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ReservaOnline - Restaurante</h1>
+  </header>
+
+  <!-- Menu Inicial -->
+  <section id="inicio">
+    <h2>Gerencie seu restaurante</h2>
+    <button onclick="mostrarCadastro()">Cadastrar Restaurante</button>
+    <button onclick="mostrarLogin()">Login</button>
+    <a href="/frontend/home.html" class="voltarHome">← Voltar para Home</a>
+  </section>
+
+  <!-- Cadastro -->
+  <section id="formCadastro" class="oculto">
+    <h2>Cadastro de Restaurante</h2>
+    <input id="cadNome" placeholder="Nome do restaurante" />
+    <input id="cadEmail" placeholder="Email" />
+    <input id="cadSenha" type="password" placeholder="Senha" />
+    <button onclick="cadastrarRestaurante()">Cadastrar</button>
+    <button class="voltar" onclick="voltarInicio()">Voltar</button>
+  </section>
+
+  <!-- Login -->
+  <section id="formLogin" class="oculto">
+    <h2>Login do Restaurante</h2>
+    <input id="loginEmail" placeholder="Email" />
+    <input id="loginSenha" type="password" placeholder="Senha" />
+    <button onclick="loginRestaurante()">Entrar</button>
+    <button class="voltar" onclick="voltarInicio()">Voltar</button>
+  </section>
+
+  <!-- Painel do Restaurante -->
+  <section id="painel" class="oculto">
+    <div class="topoReserva">
+      <h2>Painel do Restaurante</h2>
+      <button onclick="logout()">Sair</button>
+    </div>
+    <p>Bem-vindo! Aqui você poderá:</p>
+    <ul>
+      <li>Gerenciar mesas</li>
+      <li>Gerenciar cardápio</li>
+      <li>Gerenciar garçons</li>
+    </ul>
+
+    <!-- Botões de navegação futura -->
+    <button id="btnMesas">Ir para Gerenciar Mesas</button>
+    <button id="btnCardapio">Ir para Cardápio</button>
+    <button id="btnGarcons">Ir para Garçons</button>
+    <button id="btnReservas">Ver Reservas</button>
+    <button id="btnPedidos">Pedidos/Acesso Garçom</button>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

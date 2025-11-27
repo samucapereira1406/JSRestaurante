@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gerenciar Garçons - ReservaOnline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Garçons - ReservaOnline</h1>
+    <a href="index.html" class="voltarHome">← Voltar para o Painel</a>
+  </header>
+
+  <section>
+    <h2>Cadastrar Novo Garçom</h2>
+    <input type="text" id="nomeGarcom" placeholder="Nome do Garçom" />
+    <input type="email" id="emailGarcom" placeholder="Email do Garçom" />
+    <input type="password" id="senhaGarcom" placeholder="Senha" />
+    <button onclick="cadastrarGarcom()">Cadastrar Garçom</button>
+  </section>
+
+  <section>
+    <h2>Garçons Cadastrados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaGarcons">
+      </tbody>
+    </table>
+  </section>
+
+  <script src="garcons.js"></script>
+</body>
+</html>

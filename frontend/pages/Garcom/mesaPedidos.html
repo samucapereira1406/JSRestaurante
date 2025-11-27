@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pedidos da Mesa - ReservaOnline</title>
+  <link rel="stylesheet" href="../restaurante/style.css" />
+  <style>
+    /* ajuste local só p/ larguras */
+    .full          { width:100%; margin:6px 0 }
+    section        { max-width:500px; margin:40px auto }
+    #listaItens li { margin:4px 0 }
+  </style>
+</head>
+<body>
+  <header><h1>Gerenciar Pedido da Mesa</h1></header>
+
+  <section>
+    <h2 id="mesaInfo">Mesa ?</h2>
+
+    <select id="cardapioSelect" class="full"></select>
+    <input  id="quantidade" type="number" min="1" value="1" class="full"/>
+
+    <button class="full" onclick="adicionarItem()">Adicionar ao Pedido</button>
+
+    <h3>Itens do Pedido</h3>
+    <ul id="listaItens"></ul>
+    <h3 id="totalPedido">Total: R$ 0,00</h3>
+
+    <button id="btnConfirmar" class="full"  onclick="confirmarPagamento()">Confirmar Pagamento</button>
+    <button id="btnFinalizar" class="full"  onclick="finalizarMesa()" style="display:none">Finalizar Pedido</button>
+    <button onclick="voltarPainel()">← Voltar</button>
+  </section>
+
+  <script src="mesaPedidos.js"></script>
+</body>
+</html>

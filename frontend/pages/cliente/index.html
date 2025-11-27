@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>ReservaOnline - Cliente</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ReservaOnline</h1>
+  </header>
+
+  <!-- Menu Inicial -->
+  <section id="inicio">
+    <h2>Bem-vindo</h2>
+    <button onclick="mostrarCadastro()">Cadastrar</button>
+    <button onclick="mostrarLogin()">Login</button>
+    <a href="/frontend/home.html" class="voltarHome">← Voltar para Home</a>
+  </section>
+
+  <!-- Cadastro -->
+  <section id="formCadastro" class="oculto">
+    <h2>Cadastro</h2>
+    <input id="cadNome" placeholder="Nome completo" />
+    <input id="cadTelefone" placeholder="Telefone" />
+    <input id="cadEmail" placeholder="Email" />
+    <input id="cadSenha" type="password" placeholder="Senha" />
+    <button onclick="cadastrarCliente()">Cadastrar</button>
+    <button class="voltar" onclick="voltarInicio()">Voltar</button>
+  </section>
+
+  <!-- Login -->
+  <section id="formLogin" class="oculto">
+    <h2>Login</h2>
+    <input id="loginEmail" placeholder="Email" />
+    <input id="loginSenha" type="password" placeholder="Senha" />
+    <button onclick="loginCliente()">Entrar</button>
+    <button class="voltar" onclick="voltarInicio()">Voltar</button>
+  </section>
+
+  <!-- Reserva -->
+  <section id="reserva" class="oculto">
+    <div class="topoReserva">
+      <h2>Fazer Reserva</h2>
+      <button class="botao" onclick="logout()">Sair</button>
+    </div>
+
+    <select id="restaurantes" onchange="carregarMesas()">
+      <option disabled selected>Escolha um restaurante</option>
+    </select>
+
+    <select id="mesas">
+      <option disabled selected>Escolha uma mesa</option>
+    </select>
+
+    <input type="datetime-local" id="dataHora" />
+    <button onclick="fazerReserva()">Reservar</button>
+
+    <section id="minhasReservas">
+      <h2>Minhas Reservas</h2>
+      <ul id="listaReservas"></ul>
+    </section>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

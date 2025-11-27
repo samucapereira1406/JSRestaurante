@@ -1,0 +1,77 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+}
+
+header {
+  background: linear-gradient(90deg, #f03e7e, #fe7e00);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+section {
+  background: white;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.voltarHome {
+  display: inline-block;
+  margin-top: 20px;
+  color: #f03e7e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.voltarHome:hover {
+  text-decoration: underline;
+}
+
+
+button {
+  background: #f03e7e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d62d68;
+}
+
+button.voltar {
+  background: transparent;
+  color: #f03e7e;
+  border: 1px solid #f03e7e;
+}
+
+.topoReserva {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.oculto {
+  display: none;
+}

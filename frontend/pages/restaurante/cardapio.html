@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gerenciar Cardápio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Cardápio - ReservaOnline</h1>
+    <a href="index.html" class="voltarHome">&larr; Voltar para o Painel</a>
+  </header>
+
+  <section>
+    <h2>Adicionar Item ao Cardápio</h2>
+    <input type="text" id="nomeItem" placeholder="Nome do prato ou bebida" />
+    <input type="number" id="precoItem" placeholder="Preço em R$" step="0.01" />
+    <button onclick="cadastrarItem()">Adicionar</button>
+  </section>
+
+  <section>
+    <h2>Itens do Cardápio</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaCardapio">
+      </tbody>
+    </table>
+  </section>
+
+  <script src="cardapio.js"></script>
+</body>
+</html>

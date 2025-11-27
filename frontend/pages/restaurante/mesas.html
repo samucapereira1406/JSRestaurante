@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gerenciar Mesas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mesas - ReservaOnline</h1>
+    <a href="index.html" class="voltarHome">← Voltar para o Painel</a>
+  </header>
+
+  <section>
+    <h2>Cadastrar Nova Mesa</h2>
+    <input type="number" id="numeroMesa" placeholder="Número da Mesa" />
+    <input type="number" id="capacidadeMesa" placeholder="Capacidade de Pessoas" />
+    <button onclick="cadastrarMesa()">Cadastrar Mesa</button>
+  </section>
+
+  <section>
+    <h2>Mesas Cadastradas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Capacidade</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaMesas">
+        <!-- Linhas serão adicionadas via JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="mesas.js"></script>
+</body>
+</html>
